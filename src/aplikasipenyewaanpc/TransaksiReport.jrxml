@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.6.final using JasperReports Library version 6.20.6-5c96b6aa8a39ac1dc6b6bea4b81168e16dd39231  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="TransaksiReport" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" >
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="MySQL"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT * FROM transaksisewa]]>
+	</queryString>
+	<field name="id" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="id"/>
+		<property name="com.jaspersoft.studio.field.label" value="id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="transaksisewa"/>
+	</field>
+	<field name="nama" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="nama"/>
+		<property name="com.jaspersoft.studio.field.label" value="nama"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="transaksisewa"/>
+	</field>
+	<field name="merek" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="merek"/>
+		<property name="com.jaspersoft.studio.field.label" value="merek"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="transaksisewa"/>
+	</field>
+	<field name="harga" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="harga"/>
+		<property name="com.jaspersoft.studio.field.label" value="harga"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="transaksisewa"/>
+	</field>
+	<field name="lama" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="lama"/>
+		<property name="com.jaspersoft.studio.field.label" value="lama"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="transaksisewa"/>
+	</field>
+	<field name="total" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="total"/>
+		<property name="com.jaspersoft.studio.field.label" value="total"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="transaksisewa"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="93" splitType="Stretch">
+			<staticText>
+				<reportElement x="170" y="10" width="220" height="30" />
+				<textElement>
+					<font size="20"/>
+				</textElement>
+				<text><![CDATA[TRANSAKSI SEWA PC]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="40" width="170" height="30" />
+				<text><![CDATA[Sewa PC mudah dan banyak pilihan]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="70" width="560" height="1" />
+				<graphicElement>
+					<pen lineWidth="3.0"/>
+				</graphicElement>
+			</line>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="41" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="10" width="80" height="20" />
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID TRANSAKSI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="90" y="10" width="90" height="20" />
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[NAMA PENYEWA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="10" width="70" height="20" />
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[MEREK/TYPE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="290" y="10" width="70" height="20" />
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[HARGA SEWA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="380" y="10" width="70" height="20" />
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[LAMA SEWA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="470" y="10" width="50" height="20" />
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[TOTAL]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="32" width="560" height="1" />
+				<graphicElement>
+					<pen lineWidth="1.0"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="24" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="80" height="20" />
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="90" y="0" width="80" height="20" />
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{nama}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="195" y="0" width="80" height="20" />
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{merek}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="285" y="0" width="80" height="20" />
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{harga}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="370" y="0" width="80" height="20" />
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{lama}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="450" y="0" width="70" height="20" />
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{total}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
